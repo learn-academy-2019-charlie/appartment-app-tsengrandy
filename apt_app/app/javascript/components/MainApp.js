@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
+import Header from './Header'
 import AnonymousHome from './page/AnonymousHome'
 import AuthenticatedHome from './page/AuthenticatedHome'
 
@@ -14,6 +15,8 @@ class MainApp extends React.Component {
     } = this.props
 
     return (
+      <div>
+      <Header logged_in = {this.props.logged_in} />
       <React.Fragment>
         {logged_in &&
           <div>
@@ -39,6 +42,7 @@ class MainApp extends React.Component {
           }
         </Router>
       </React.Fragment>
+      </div>
     );
   }
 }
