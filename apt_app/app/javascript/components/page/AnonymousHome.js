@@ -4,7 +4,7 @@ class AnonymousHome extends React.Component {
   render () {
     return (
       <React.Fragment>
-        List of available apartments:
+        basic page
       </React.Fragment>
     );
   }
